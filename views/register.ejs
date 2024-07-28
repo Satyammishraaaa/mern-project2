@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="css/register.css">
+    <!-- <link rel="stylesheet" href="css/login.css"> -->
+    <link rel="shortcut icon" href="./Images/Logo.png" type="image/x-icon">
+    <!-- Bootstrap Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid a b">
+        <br>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 wrapper " style="width: 40%; margin: auto;">
+                <h1 class="text-center">Register Here</h1>
+                <!-- error msg -->
+                <% if (msg.length> 0) { %>
+                    <div class="alert alert-danger">
+                        <%= msg %>
+                    </div>
+                    <% } %>
+                        <form action="/userInsert" method="post" enctype="multipart/form-data">
+                            <div class="input-box">
+                                <label for="name">Name</label>
+                                <input name="n" type="text" id="name" placeholder="Enter your name" class="form-control"
+                                    required>
+                            </div>
+                            <div class="input-box mt-4">
+                                <label for="username">Username</label>
+                                <input name="un" type="text" id="username" placeholder="Username" required>
+                            </div>
+                            <div class="input-box mt-4">
+                                <label for="email">Email</label>
+                                <input name="e" type="email" id="email" placeholder="Enter your e-mail"
+                                    class="form-control" required>
+                            </div>
+                            <div class="input-box mt-4">
+                                <label for="phone">Phone</label>
+                                <input name="ph" type="text" id="phone" placeholder="Enter your number"
+                                    class="form-control" required>
+                            </div>
+                            <div class="input-box mt-4">
+                                <label for="password">Password</label>
+                                <input name="p" type="password" id="password" placeholder="Password"
+                                    class="form-control" required>
+                            </div>
+                            <div class="input-box mt-4">
+                                <label for="confirm-password">Confirm Password</label>
+                                <input name="cp" type="password" id="confirm-password"
+                                    placeholder="Confirm your password" class="form-control" required>
+                            </div>
+                            <div class="gender-box mt-4">
+                                <label>Gender:</label>
+                                <input name="g" type="radio" name="Gender" value="male" required>Male
+                                <input name="g" type="radio" name="Gender" value="female" required>Female
+                            </div>
+                            <div class="input-box mt-1">
+                                <label for="image">Image</label>
+                                <input name="image" type="file" class="form-control" style="padding: 4px 8px;
+                                border-radius: 50px; height: 31px;" required>
+                            </div>
+                            <center>
+                                <button class="btn btn-success mt-4" type="submit">Register</button>
+                            </center>
+                        </form>
+                        <div class="register-link text-center">
+                            <p>Already registered?
+                                <a href="/" target="_blank">Login</a>
+                            </p>
+                        </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+</body>
+
+</html>

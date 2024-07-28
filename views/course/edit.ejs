@@ -1,0 +1,56 @@
+<%- include("../header.ejs") %>
+    <br><br>
+    <h1 class="text-center m-5">Edit Display</h1>
+    <div class="continainer">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <form action="/courseUpdate/<%= c.id %>" method="post">
+                    <div class="mb-3">
+                        <label for="">Name</label>
+                        <input type="text" value="<%= c.name %>" name="name" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="">Email</label>
+                        <input type="text" value="<%= c.email%>" name="email" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="">Phone no.</label>
+                        <input type="number" value="<%= c.phone %>" name="phone" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="">DOB</label>
+                        <input type="date" value="<%= c.dob %>" name="dob" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="">Address</label>
+                        <textarea name="address" class="form-control"><%= c.address %></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="">Gender</label>
+                        <input type="radio" name="gender" value="male" <%=c.gender=='male' ?'checked':'' %> >Male
+                        <input type="radio" name="gender" value="female" <%=c.gender=='female' ?'checked':'' %> >Female
+                    </div>
+                    <div class="mb-3">
+                        <label for="">Education</label>
+                        <select name="education" class="form-control form-select">
+                            <!-- <option value="">select education</option> -->
+                            <option value="10" <%=c.college=='10' ?'selected':'' %> >10th</option>
+                            <option value="12" <%=c.college=='12' ?'selected':'' %> >12th</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="">Course</label>
+                        <input type="text" readonly value="btech" class="form-control" name="course">
+                    </div>
+                    <center>
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </center>
+                    <br>
+                </form>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+
+    <%- include("../footer.ejs") %>

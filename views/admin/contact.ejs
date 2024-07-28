@@ -1,0 +1,33 @@
+<%- include("../header.ejs") %>
+    <br><br>
+    <div class="container">
+        <br>
+        <h2 class="text-center">Contact Messages</h2>
+        <br>
+        <table class="table table-bordered text-center">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Message</th>
+            </tr>
+            <% contacts.forEach((contact)=> { %>
+                <tr>
+                    <td>
+                        <%= contact.name %>
+                    </td>
+                    <td>
+                        <%= contact.email %>
+                    </td>
+                    <td>
+                        <%= contact.message %>
+                    </td>
+                </tr>
+                <% }) %>
+        </table>
+
+        <center>
+            <a href="/home" class="btn btn-info">Back</a>
+        </center>
+    </div>
+    <br>
+    <%- include("../footer.ejs") %>

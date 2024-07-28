@@ -1,0 +1,59 @@
+<%- include("./header.ejs") %>
+    <div class="container-fluid">
+        <img src="/Images/University5.jpeg" style="width: 100%; height: 100vh;">
+    </div>
+    <!-- contact us -->
+    <div class="container-fluid b text-bg-light"
+        style="position: relative;top: 0;background: rgba(128, 128, 128, 0.404);height: 100vh;">
+        <h4 class="text-center text-uppercase m-4 pt-3" style="font-size: 5pc;">Contact Us</h4>
+        <br>
+        <div class="row mt-5">
+            <div class="col-md-1"></div>
+            <div class="col-md-3 fs-4">
+                <h4 class="text-center text-uppercase">Online Inquiry</h4>
+                <br>
+                <form action="/contact_message" class="needs-validation" method="post">
+                    <div class="col-mb-3">
+                        <input name="name" type="text" class="form-control" placeholder="Name">
+                    </div>
+                    <br>
+                    <div class="col-mb-3">
+                        <input name="email" type="email" class="form-control" placeholder="Email">
+                    </div><br>
+                    <div class="col-mb-3">
+                        <textarea name="message" class="form-control" placeholder="Message"></textarea>
+                    </div><br>
+                    <center>
+                        <button href="#" class="btn btn-danger" type="submit">Submit</button>
+                    </center>
+                    <br>
+                </form>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-2">
+                <h4 class="text-center text-uppercase">Contact Details</h4>
+                <br>
+                <p class="text-center">fgevufve@gmail.com <br>
+                    (102)-1587561485
+                    <br><br>
+                    <b>Westfield</b> <br>
+                    215-CityCentre,45845 <br><br>
+                    <b>Summit</b> <br>
+                    154-Times Square,45 <br><br>
+                    <b>ShortHills Office</b> <br>
+                    454-Watch Tower,451545 <br>
+                </p>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-3">
+                <h2 class="text-uppercase text-center">Our Location </h2>
+                <hr class="featurette-divider">
+                <div class="row">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.865164027531!2d114.13398180880132!3d22.28309404074046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3403ff8427b43597%3A0x2c48f5d3cd6fc8d8!2sThe%20University%20of%20Hong%20Kong%20(HKU)!5e0!3m2!1sen!2sin!4v1720111636973!5m2!1sen!2sin"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include("./footer.ejs") %>
